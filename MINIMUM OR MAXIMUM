@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int ts;
+	cin>>ts;
+	while(ts--)
+	{
+	    int size,n=1;
+	    cin>>size;
+	    int arr[size];
+	    for(int i=0;i<size;i++)
+	    {
+	        cin>>arr[i];
+	    }
+	    int mx=arr[0];
+	    int mn=arr[0];
+	    for(int i=1;i<size;i++)
+	    {
+	        if(arr[i]>mn && arr[i]<mx)
+	        {
+	            n=0;
+	        break;
+	        }
+ mn=min(mn,arr[i]);
+ mx=max(mx,arr[i]);
+	    }
+	    if(size==1)
+	    cout<<"yEs"<<endl;
+	    
+	    else if(n==0)
+	    cout<<"No"<<endl;
+	    else
+	    cout<<"Yes"<<endl;
+	    
+	}
+	return 0;
+}
